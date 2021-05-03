@@ -23,7 +23,18 @@ enum APIInfo: String {
 }
 
 class APIManager {
+    
     static let shared = APIManager()
+    private(set) var user: User?
+    private(set) var friendList: [Friend] = []
+    
+    func setUser(user: User?) {
+        self.user = user
+    }
+    
+    func setFiendList(list: [Friend]) {
+        self.friendList = list
+    }
     
     func getUserData(completion: (@escaping (User?) -> ())) {
         self.loadAPI(info: .User) { (result: Result<[User]>?) in

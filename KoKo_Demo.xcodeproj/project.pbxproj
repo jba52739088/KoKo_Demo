@@ -42,6 +42,8 @@
 		F9FB67CA263FDA8D000EAB4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67C9263FDA8D000EAB4A /* User.swift */; };
 		F9FB67CE263FE7D0000EAB4A /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67CD263FE7D0000EAB4A /* Friend.swift */; };
 		F9FB67D3263FE8DD000EAB4A /* FriendsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67D2263FE8DD000EAB4A /* FriendsVM.swift */; };
+		F9FB67D6263FEE40000EAB4A /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67D5263FEE40000EAB4A /* FirstVC.swift */; };
+		F9FB67D9263FEF6B000EAB4A /* FirstVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67D8263FEF6B000EAB4A /* FirstVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		F9FB67C9263FDA8D000EAB4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F9FB67CD263FE7D0000EAB4A /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		F9FB67D2263FE8DD000EAB4A /* FriendsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVM.swift; sourceTree = "<group>"; };
+		F9FB67D5263FEE40000EAB4A /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		F9FB67D8263FEF6B000EAB4A /* FirstVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,11 +141,13 @@
 			isa = PBXGroup;
 			children = (
 				F95F82112639CC870025E68B /* AppDelegate.swift */,
+				F9FB67D5263FEE40000EAB4A /* FirstVC.swift */,
 				F9FB67D0263FE8B6000EAB4A /* Page */,
 				F95F8270263EB7430025E68B /* ViewModel */,
 				F95F8272263EB75C0025E68B /* Helpers */,
 				F9FB67BE263FD7AB000EAB4A /* Model */,
 				F95F821A2639CC880025E68B /* Assets.xcassets */,
+				F95F82172639CC870025E68B /* Main.storyboard */,
 				F95F821C2639CC880025E68B /* LaunchScreen.storyboard */,
 				F95F821F2639CC880025E68B /* Info.plist */,
 			);
@@ -153,7 +159,6 @@
 			children = (
 				F95F82362639D5930025E68B /* MainTabVC.swift */,
 				F95F825B263C0F2C0025E68B /* KokoTabBar.swift */,
-				F95F82172639CC870025E68B /* Main.storyboard */,
 			);
 			path = MainTab;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 		F95F8270263EB7430025E68B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F9FB67D8263FEF6B000EAB4A /* FirstVM.swift */,
 				F9FB67D2263FE8DD000EAB4A /* FriendsVM.swift */,
 			);
 			path = ViewModel;
@@ -422,12 +428,14 @@
 				F95F827E263EBC270025E68B /* ChatView.swift in Sources */,
 				F95F825F263EA6390025E68B /* Extension_UIView.swift in Sources */,
 				F95F82A9263F9B440025E68B /* FriendsView.swift in Sources */,
+				F9FB67D6263FEE40000EAB4A /* FirstVC.swift in Sources */,
 				F95F82372639D5930025E68B /* MainTabVC.swift in Sources */,
 				F9FB67C4263FDA3E000EAB4A /* Result.swift in Sources */,
 				F95F8245263BECE30025E68B /* FriendsVC.swift in Sources */,
 				F95F8240263BECD20025E68B /* ProductsVC.swift in Sources */,
 				F9FB67CE263FE7D0000EAB4A /* Friend.swift in Sources */,
 				F95F82122639CC870025E68B /* AppDelegate.swift in Sources */,
+				F9FB67D9263FEF6B000EAB4A /* FirstVM.swift in Sources */,
 				F9FB67CA263FDA8D000EAB4A /* User.swift in Sources */,
 				F9FB6790263FC797000EAB4A /* FriendInvitionView.swift in Sources */,
 				F95F82B6263FA6AF0025E68B /* FriendCell.swift in Sources */,
