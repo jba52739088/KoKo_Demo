@@ -37,6 +37,11 @@
 		F9FB678D263FB276000EAB4A /* FriendInvitionCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9FB678C263FB276000EAB4A /* FriendInvitionCard.xib */; };
 		F9FB6790263FC797000EAB4A /* FriendInvitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB678F263FC797000EAB4A /* FriendInvitionView.swift */; };
 		F9FB6793263FC79F000EAB4A /* FriendInvitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9FB6792263FC79F000EAB4A /* FriendInvitionView.xib */; };
+		F9FB67C0263FD7C4000EAB4A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67BF263FD7C4000EAB4A /* APIManager.swift */; };
+		F9FB67C4263FDA3E000EAB4A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67C3263FDA3E000EAB4A /* Result.swift */; };
+		F9FB67CA263FDA8D000EAB4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67C9263FDA8D000EAB4A /* User.swift */; };
+		F9FB67CE263FE7D0000EAB4A /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67CD263FE7D0000EAB4A /* Friend.swift */; };
+		F9FB67D3263FE8DD000EAB4A /* FriendsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67D2263FE8DD000EAB4A /* FriendsVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,11 @@
 		F9FB678C263FB276000EAB4A /* FriendInvitionCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendInvitionCard.xib; sourceTree = "<group>"; };
 		F9FB678F263FC797000EAB4A /* FriendInvitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInvitionView.swift; sourceTree = "<group>"; };
 		F9FB6792263FC79F000EAB4A /* FriendInvitionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendInvitionView.xib; sourceTree = "<group>"; };
+		F9FB67BF263FD7C4000EAB4A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F9FB67C3263FDA3E000EAB4A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F9FB67C9263FDA8D000EAB4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F9FB67CD263FE7D0000EAB4A /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		F9FB67D2263FE8DD000EAB4A /* FriendsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,14 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				F95F82112639CC870025E68B /* AppDelegate.swift */,
-				F95F8265263EB6CD0025E68B /* MainTab */,
-				F95F8267263EB6E50025E68B /* Products */,
-				F95F8269263EB6F10025E68B /* Friends */,
-				F95F826B263EB6FA0025E68B /* Home */,
-				F95F826D263EB7050025E68B /* Manage */,
-				F95F826F263EB7190025E68B /* Setting */,
-				F95F8270263EB7430025E68B /* Views */,
+				F9FB67D0263FE8B6000EAB4A /* Page */,
+				F95F8270263EB7430025E68B /* ViewModel */,
 				F95F8272263EB75C0025E68B /* Helpers */,
+				F9FB67BE263FD7AB000EAB4A /* Model */,
 				F95F821A2639CC880025E68B /* Assets.xcassets */,
 				F95F821C2639CC880025E68B /* LaunchScreen.storyboard */,
 				F95F821F2639CC880025E68B /* Info.plist */,
@@ -198,11 +204,12 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		F95F8270263EB7430025E68B /* Views */ = {
+		F95F8270263EB7430025E68B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F9FB67D2263FE8DD000EAB4A /* FriendsVM.swift */,
 			);
-			path = Views;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F95F8272263EB75C0025E68B /* Helpers */ = {
@@ -238,6 +245,46 @@
 				F95F82B5263FA6AF0025E68B /* FriendCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F9FB67BE263FD7AB000EAB4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9FB67C7263FDA63000EAB4A /* Manager */,
+				F9FB67C6263FDA5A000EAB4A /* Entities */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9FB67C6263FDA5A000EAB4A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F9FB67C3263FDA3E000EAB4A /* Result.swift */,
+				F9FB67C9263FDA8D000EAB4A /* User.swift */,
+				F9FB67CD263FE7D0000EAB4A /* Friend.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F9FB67C7263FDA63000EAB4A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F9FB67BF263FD7C4000EAB4A /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F9FB67D0263FE8B6000EAB4A /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				F95F8265263EB6CD0025E68B /* MainTab */,
+				F95F8267263EB6E50025E68B /* Products */,
+				F95F8269263EB6F10025E68B /* Friends */,
+				F95F826B263EB6FA0025E68B /* Home */,
+				F95F826D263EB7050025E68B /* Manage */,
+				F95F826F263EB7190025E68B /* Setting */,
+			);
+			path = Page;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,18 +412,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9FB67C0263FD7C4000EAB4A /* APIManager.swift in Sources */,
 				F95F8277263EBA050025E68B /* NoneFriendView.swift in Sources */,
 				F9FB678A263FB26D000EAB4A /* FriendInvitionCard.swift in Sources */,
 				F95F8254263BED9E0025E68B /* SettingVC.swift in Sources */,
+				F9FB67D3263FE8DD000EAB4A /* FriendsVM.swift in Sources */,
 				F95F824A263BED360025E68B /* HomeVC.swift in Sources */,
 				F95F825C263C0F2C0025E68B /* KokoTabBar.swift in Sources */,
 				F95F827E263EBC270025E68B /* ChatView.swift in Sources */,
 				F95F825F263EA6390025E68B /* Extension_UIView.swift in Sources */,
 				F95F82A9263F9B440025E68B /* FriendsView.swift in Sources */,
 				F95F82372639D5930025E68B /* MainTabVC.swift in Sources */,
+				F9FB67C4263FDA3E000EAB4A /* Result.swift in Sources */,
 				F95F8245263BECE30025E68B /* FriendsVC.swift in Sources */,
 				F95F8240263BECD20025E68B /* ProductsVC.swift in Sources */,
+				F9FB67CE263FE7D0000EAB4A /* Friend.swift in Sources */,
 				F95F82122639CC870025E68B /* AppDelegate.swift in Sources */,
+				F9FB67CA263FDA8D000EAB4A /* User.swift in Sources */,
 				F9FB6790263FC797000EAB4A /* FriendInvitionView.swift in Sources */,
 				F95F82B6263FA6AF0025E68B /* FriendCell.swift in Sources */,
 				F95F824F263BED910025E68B /* ManageVC.swift in Sources */,

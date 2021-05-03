@@ -17,7 +17,10 @@ class FriendsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        APIManager.shared.getFriendList_3 { (datas) in
+            //
+        }
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
