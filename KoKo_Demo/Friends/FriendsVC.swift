@@ -24,10 +24,12 @@ class FriendsVC: UIViewController {
         super.viewDidAppear(animated)
         
         let noneFriendView = NoneFriendView.shared!
+        let friendView = FriendsView.shared!
         let msgView = ChatView.shared!
         noneFriendView.frame = friendView.frame
         msgView.frame = chatView.frame
-        self.friendView.addSubview(noneFriendView)
+//        self.friendView.addSubview(noneFriendView)
+        self.friendView.addSubview(friendView)
         self.chatView.addSubview(msgView)
         self.view.layoutIfNeeded()
     }

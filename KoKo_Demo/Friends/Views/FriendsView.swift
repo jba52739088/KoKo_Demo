@@ -9,6 +9,13 @@ import UIKit
 
 class FriendsView: UIView {
 
+    @IBOutlet weak var viewSearch: UIView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var btnAddFriend: UIButton!
+    @IBOutlet weak var viewContent: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     private static var _shared: FriendsView?
     static var shared: FriendsView!{
         if _shared == nil{

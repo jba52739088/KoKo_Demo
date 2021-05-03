@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77F3DF59E4D7905E3AC81AF6 /* Pods_KoKo_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD67A32D3FCF216F04D0B9A0 /* Pods_KoKo_Demo.framework */; };
 		F95F82122639CC870025E68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F82112639CC870025E68B /* AppDelegate.swift */; };
 		F95F82192639CC870025E68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95F82172639CC870025E68B /* Main.storyboard */; };
 		F95F821B2639CC880025E68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95F821A2639CC880025E68B /* Assets.xcassets */; };
@@ -29,9 +30,15 @@
 		F95F827E263EBC270025E68B /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F827D263EBC270025E68B /* ChatView.swift */; };
 		F95F8281263EBD090025E68B /* ChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F8280263EBD090025E68B /* ChatView.xib */; };
 		F95F82A9263F9B440025E68B /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F82A8263F9B440025E68B /* FriendsView.swift */; };
+		F95F82B6263FA6AF0025E68B /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F82B4263FA6AF0025E68B /* FriendCell.swift */; };
+		F95F82B7263FA6AF0025E68B /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F82B5263FA6AF0025E68B /* FriendCell.xib */; };
+		F95F82BA263FAC180025E68B /* FriendsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F82A7263F9B440025E68B /* FriendsView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37AD78E8C4F8EF88EA40FE28 /* Pods-KoKo_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoKo_Demo.release.xcconfig"; path = "Target Support Files/Pods-KoKo_Demo/Pods-KoKo_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		38D7BFB8E08B4D8FCEB1A20B /* Pods-KoKo_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoKo_Demo.debug.xcconfig"; path = "Target Support Files/Pods-KoKo_Demo/Pods-KoKo_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		CD67A32D3FCF216F04D0B9A0 /* Pods_KoKo_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoKo_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95F820E2639CC870025E68B /* KoKo_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoKo_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95F82112639CC870025E68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F95F82182639CC870025E68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +64,8 @@
 		F95F8280263EBD090025E68B /* ChatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatView.xib; sourceTree = "<group>"; };
 		F95F82A7263F9B440025E68B /* FriendsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsView.xib; sourceTree = "<group>"; };
 		F95F82A8263F9B440025E68B /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		F95F82B4263FA6AF0025E68B /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		F95F82B5263FA6AF0025E68B /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,17 +73,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F3DF59E4D7905E3AC81AF6 /* Pods_KoKo_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44C33A5D14A00E95EE850B7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38D7BFB8E08B4D8FCEB1A20B /* Pods-KoKo_Demo.debug.xcconfig */,
+				37AD78E8C4F8EF88EA40FE28 /* Pods-KoKo_Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5CFCDB674182FCFB37156E6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD67A32D3FCF216F04D0B9A0 /* Pods_KoKo_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F95F82052639CC870025E68B = {
 			isa = PBXGroup;
 			children = (
 				F95F82102639CC870025E68B /* KoKo_Demo */,
 				F95F820F2639CC870025E68B /* Products */,
+				44C33A5D14A00E95EE850B7C /* Pods */,
+				5CFCDB674182FCFB37156E6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,12 +158,7 @@
 			children = (
 				F95F8243263BECE30025E68B /* FriendsVC.swift */,
 				F95F8244263BECE30025E68B /* FriendsVC.xib */,
-				F95F8276263EBA050025E68B /* NoneFriendView.swift */,
-				F95F827A263EBA100025E68B /* NoneFriendView.xib */,
-				F95F82A8263F9B440025E68B /* FriendsView.swift */,
-				F95F82A7263F9B440025E68B /* FriendsView.xib */,
-				F95F827D263EBC270025E68B /* ChatView.swift */,
-				F95F8280263EBD090025E68B /* ChatView.xib */,
+				F95F82B2263FA6720025E68B /* Views */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -181,6 +205,29 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		F95F82B2263FA6720025E68B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F95F8276263EBA050025E68B /* NoneFriendView.swift */,
+				F95F827A263EBA100025E68B /* NoneFriendView.xib */,
+				F95F82A8263F9B440025E68B /* FriendsView.swift */,
+				F95F82A7263F9B440025E68B /* FriendsView.xib */,
+				F95F827D263EBC270025E68B /* ChatView.swift */,
+				F95F8280263EBD090025E68B /* ChatView.xib */,
+				F95F82B3263FA68D0025E68B /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F95F82B3263FA68D0025E68B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F95F82B4263FA6AF0025E68B /* FriendCell.swift */,
+				F95F82B5263FA6AF0025E68B /* FriendCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F95F82222639CC880025E68B /* Build configuration list for PBXNativeTarget "KoKo_Demo" */;
 			buildPhases = (
+				3266A6B8EC6B82327C033233 /* [CP] Check Pods Manifest.lock */,
 				F95F820A2639CC870025E68B /* Sources */,
 				F95F820B2639CC870025E68B /* Frameworks */,
 				F95F820C2639CC870025E68B /* Resources */,
+				72B433D494DF04D426F2BF3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,15 +292,59 @@
 				F95F8281263EBD090025E68B /* ChatView.xib in Resources */,
 				F95F8255263BED9E0025E68B /* SettingVC.xib in Resources */,
 				F95F8250263BED910025E68B /* ManageVC.xib in Resources */,
+				F95F82B7263FA6AF0025E68B /* FriendCell.xib in Resources */,
 				F95F82192639CC870025E68B /* Main.storyboard in Resources */,
 				F95F8246263BECE30025E68B /* FriendsVC.xib in Resources */,
 				F95F8241263BECD20025E68B /* ProductsVC.xib in Resources */,
 				F95F824B263BED360025E68B /* HomeVC.xib in Resources */,
+				F95F82BA263FAC180025E68B /* FriendsView.xib in Resources */,
 				F95F827B263EBA100025E68B /* NoneFriendView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3266A6B8EC6B82327C033233 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoKo_Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B433D494DF04D426F2BF3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoKo_Demo/Pods-KoKo_Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoKo_Demo/Pods-KoKo_Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoKo_Demo/Pods-KoKo_Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F95F820A2639CC870025E68B /* Sources */ = {
@@ -269,6 +362,7 @@
 				F95F8245263BECE30025E68B /* FriendsVC.swift in Sources */,
 				F95F8240263BECD20025E68B /* ProductsVC.swift in Sources */,
 				F95F82122639CC870025E68B /* AppDelegate.swift in Sources */,
+				F95F82B6263FA6AF0025E68B /* FriendCell.swift in Sources */,
 				F95F824F263BED910025E68B /* ManageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +507,7 @@
 		};
 		F95F82232639CC880025E68B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38D7BFB8E08B4D8FCEB1A20B /* Pods-KoKo_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,6 +528,7 @@
 		};
 		F95F82242639CC880025E68B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37AD78E8C4F8EF88EA40FE28 /* Pods-KoKo_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
