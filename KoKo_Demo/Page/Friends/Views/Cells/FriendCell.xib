@@ -93,7 +93,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2E-xJ-F2U">
-                        <rect key="frame" x="109" y="59" width="201" height="1"/>
+                        <rect key="frame" x="85" y="59" width="225" height="1"/>
                         <color key="backgroundColor" name="whiteThree"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Boq-qg-wab"/>
@@ -102,10 +102,10 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="j2E-xJ-F2U" firstAttribute="leading" secondItem="uaF-HX-nlS" secondAttribute="trailing" constant="85" id="EaT-fM-a0T"/>
                     <constraint firstItem="GoE-ed-uyP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SeK-nr-ncF" secondAttribute="trailing" constant="15" id="NXD-C8-xMJ"/>
                     <constraint firstAttribute="trailing" secondItem="GoE-ed-uyP" secondAttribute="trailing" constant="20" id="Q3q-nt-uJu"/>
                     <constraint firstItem="GoE-ed-uyP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RjF-mh-0ge"/>
+                    <constraint firstItem="j2E-xJ-F2U" firstAttribute="leading" secondItem="SeK-nr-ncF" secondAttribute="leading" id="USQ-FC-2TE"/>
                     <constraint firstItem="SeK-nr-ncF" firstAttribute="leading" secondItem="aJj-Bh-RmI" secondAttribute="trailing" constant="15" id="Zva-f0-DSs"/>
                     <constraint firstItem="aJj-Bh-RmI" firstAttribute="leading" secondItem="uaF-HX-nlS" secondAttribute="trailing" constant="6" id="aGj-I0-k4U"/>
                     <constraint firstAttribute="trailing" secondItem="j2E-xJ-F2U" secondAttribute="trailing" constant="10" id="f46-e4-AIh"/>

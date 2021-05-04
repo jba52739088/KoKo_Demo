@@ -8,9 +8,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsView" customModule="KoKo_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAddFriend" destination="c1h-c7-iUa" id="SXS-iy-8sG"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="qev-xr-yFq"/>
+                <outlet property="searchBar" destination="Xxt-lH-cPa" id="hiP-Df-n1s"/>
+                <outlet property="tableView" destination="BHA-56-mWH" id="5lS-EZ-4CB"/>
+                <outlet property="viewContent" destination="Kz7-oa-EE7" id="hNI-cB-dEI"/>
+                <outlet property="viewSearch" destination="ADi-fF-2Dx" id="7yS-Gv-0E2"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FriendsView" customModule="KoKo_Demo">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -44,12 +53,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz7-oa-EE7">
                     <rect key="frame" x="0.0" y="61" width="414" height="639"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BHA-56-mWH">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BHA-56-mWH">
                             <rect key="frame" x="20" y="0.0" width="374" height="639"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <connections>
-                                <outlet property="dataSource" destination="-1" id="Bwj-nF-98d"/>
-                                <outlet property="delegate" destination="-1" id="2gg-uH-Yl1"/>
+                                <outlet property="dataSource" destination="-1" id="JEE-RB-1Ec"/>
+                                <outlet property="delegate" destination="-1" id="VNB-tf-b8m"/>
                             </connections>
                         </tableView>
                     </subviews>
@@ -75,13 +84,6 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="btnAddFriend" destination="c1h-c7-iUa" id="3ya-pJ-sNp"/>
-                <outlet property="searchBar" destination="Xxt-lH-cPa" id="LE5-SR-Wvc"/>
-                <outlet property="tableView" destination="BHA-56-mWH" id="7XG-iC-i3m"/>
-                <outlet property="viewContent" destination="Kz7-oa-EE7" id="bbR-ZU-7In"/>
-                <outlet property="viewSearch" destination="ADi-fF-2Dx" id="6GP-2i-G3K"/>
-            </connections>
             <point key="canvasLocation" x="-291.304347826087" y="120.53571428571428"/>
         </view>
     </objects>

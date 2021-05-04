@@ -4,9 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,22 +18,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-zG-cin">
+                <tableView contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-zG-cin">
                     <rect key="frame" x="30" y="25" width="354" height="136"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="oWF-1o-a6S"/>
                         <outlet property="delegate" destination="-1" id="ZMq-EM-42P"/>
                     </connections>
                 </tableView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" name="whiteTwo"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="3W2-zG-cin" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="2k4-n4-Tib"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3W2-zG-cin" secondAttribute="bottom" constant="15" id="Qo4-gh-WH4"/>
+                <constraint firstItem="3W2-zG-cin" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="2k4-n4-Tib"/>
+                <constraint firstAttribute="bottom" secondItem="3W2-zG-cin" secondAttribute="bottom" constant="15" id="Qo4-gh-WH4"/>
                 <constraint firstItem="3W2-zG-cin" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="U9T-Eu-f7l"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3W2-zG-cin" secondAttribute="trailing" constant="30" id="uwf-9i-L3N"/>
+                <constraint firstAttribute="trailing" secondItem="3W2-zG-cin" secondAttribute="trailing" constant="30" id="uwf-9i-L3N"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -44,12 +40,4 @@
             <point key="canvasLocation" x="139" y="135"/>
         </view>
     </objects>
-    <resources>
-        <namedColor name="whiteTwo">
-            <color red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

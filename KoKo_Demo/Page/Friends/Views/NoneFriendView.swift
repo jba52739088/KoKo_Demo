@@ -8,16 +8,27 @@
 import UIKit
 
 class NoneFriendView: UIView {
+    
+    @IBOutlet var contentView: UIView!
 
-    private static var _shared: NoneFriendView?
-    static var shared: NoneFriendView!{
-        if _shared == nil{
-            _shared = UINib(nibName: "NoneFriendView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? NoneFriendView
-        }
-        return _shared
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initXib()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        initXib()
+    }
+}
+
+extension NoneFriendView {
+    
+    private func initXib() {
+        Bundle.main.loadNibNamed("NoneFriendView", owner: self, options: nil)
+        self.addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }

@@ -38,11 +38,11 @@ extension FirstVC {
     }
     
     private func presentMainPage() {
-        guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainTabVC") as? MainTabVC
+        guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainNav") as? UINavigationController
             else { return }
-        let navVC = UINavigationController(rootViewController: mainVC)
-        navVC.navigationBar.isHidden = true
-        navVC.modalPresentationStyle = .fullScreen
-        self.present(navVC, animated: true, completion: nil)
+//        let navVC = UINavigationController(rootViewController: mainVC)
+//        navVC.setNavigationBarHidden(false, animated: false)
+        mainVC.modalPresentationStyle = .fullScreen
+        self.present(mainVC, animated: true, completion: nil)
     }
 }

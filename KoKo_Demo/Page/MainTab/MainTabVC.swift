@@ -36,6 +36,7 @@ class MainTabVC: UITabBarController {
         super.viewDidLoad()
         self.configNavBar()
         self.configBatItems()
+        self.delegate = self
     }
     
     override func viewWillLayoutSubviews() {
@@ -114,5 +115,13 @@ extension MainTabVC {
     
     @objc private func onClickScanBtn() {
         
+    }
+}
+
+extension MainTabVC: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if let _ = viewController as? HomeVC {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
 }

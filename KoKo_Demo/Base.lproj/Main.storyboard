@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="plO-C9-dPE">
-                                <rect key="frame" x="100" y="374.5" width="214" height="157"/>
+                                <rect key="frame" x="50" y="374.5" width="314" height="157"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcm-HR-Ouo">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="無好友">
                                             <color key="titleColor" name="hotPink"/>
@@ -42,7 +42,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ra-H9-CqX">
-                                        <rect key="frame" x="0.0" y="59" width="214" height="39"/>
+                                        <rect key="frame" x="0.0" y="59" width="314" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="好友列表無邀請">
                                             <color key="titleColor" name="hotPink"/>
@@ -63,7 +63,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lS-MB-wb2">
-                                        <rect key="frame" x="0.0" y="118" width="214" height="39"/>
+                                        <rect key="frame" x="0.0" y="118" width="314" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="好友列表含邀請好友">
                                             <color key="titleColor" name="hotPink"/>
@@ -91,8 +91,8 @@
                         <constraints>
                             <constraint firstItem="plO-C9-dPE" firstAttribute="centerY" secondItem="Fjc-89-Q83" secondAttribute="centerY" id="D7M-iP-5FG"/>
                             <constraint firstItem="plO-C9-dPE" firstAttribute="centerX" secondItem="Fjc-89-Q83" secondAttribute="centerX" id="IH6-cl-Lcg"/>
-                            <constraint firstItem="Fjc-89-Q83" firstAttribute="trailing" secondItem="plO-C9-dPE" secondAttribute="trailing" constant="100" id="JxQ-R3-0q4"/>
-                            <constraint firstItem="plO-C9-dPE" firstAttribute="leading" secondItem="Fjc-89-Q83" secondAttribute="leading" constant="100" id="e2r-ym-VG0"/>
+                            <constraint firstItem="Fjc-89-Q83" firstAttribute="trailing" secondItem="plO-C9-dPE" secondAttribute="trailing" constant="50" id="JxQ-R3-0q4"/>
+                            <constraint firstItem="plO-C9-dPE" firstAttribute="leading" secondItem="Fjc-89-Q83" secondAttribute="leading" constant="50" id="e2r-ym-VG0"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -103,7 +103,7 @@
         <!--Navigation Controller-->
         <scene sceneID="jmX-OL-BoP">
             <objects>
-                <navigationController id="7Nq-d3-0d0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNav" id="7Nq-d3-0d0" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gAD-qM-s6U">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

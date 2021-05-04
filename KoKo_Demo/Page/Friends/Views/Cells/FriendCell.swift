@@ -21,10 +21,11 @@ class FriendCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configFriendCell(data: Friend) {
+        self.lbName.text = data.name
+        self.imgStar.isHidden = data.isTop == "0"
+        self.btnInvition.isHidden = data.status != 0
+        self.btnMore.isHidden = data.status == 0
     }
     
 }
