@@ -44,6 +44,7 @@
 		F9FB67D3263FE8DD000EAB4A /* FriendsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67D2263FE8DD000EAB4A /* FriendsVM.swift */; };
 		F9FB67D6263FEE40000EAB4A /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67D5263FEE40000EAB4A /* FirstVC.swift */; };
 		F9FB67D9263FEF6B000EAB4A /* FirstVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB67D8263FEF6B000EAB4A /* FirstVM.swift */; };
+		F9FB680526410861000EAB4A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB680426410861000EAB4A /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		F9FB67D2263FE8DD000EAB4A /* FriendsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVM.swift; sourceTree = "<group>"; };
 		F9FB67D5263FEE40000EAB4A /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		F9FB67D8263FEF6B000EAB4A /* FirstVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVM.swift; sourceTree = "<group>"; };
+		F9FB680426410861000EAB4A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				F95F825E263EA6390025E68B /* Extension_UIView.swift */,
+				F9FB680426410861000EAB4A /* Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9FB680526410861000EAB4A /* Extension.swift in Sources */,
 				F9FB67C0263FD7C4000EAB4A /* APIManager.swift in Sources */,
 				F95F8277263EBA050025E68B /* NoneFriendView.swift in Sources */,
 				F9FB678A263FB26D000EAB4A /* FriendInvitionCard.swift in Sources */,

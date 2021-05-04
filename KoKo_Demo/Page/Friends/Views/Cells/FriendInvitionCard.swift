@@ -53,10 +53,6 @@ extension FriendInvitionCard {
         self.viewCard.layer.shadowColor = UIColor.black.cgColor
         self.viewCard.layer.masksToBounds = false
         self.content.layer.masksToBounds = false
-//        self.viewCard.clipsToBounds = false
-//        let shadowFrame: CGRect = (self.viewCard.layer.bounds)
-//        let shadowPath: CGPath = UIBezierPath(rect: shadowFrame).cgPath
-//        self.viewCard.layer.shadowPath = shadowPath
     }
     
 }

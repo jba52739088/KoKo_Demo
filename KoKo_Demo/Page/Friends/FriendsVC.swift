@@ -9,6 +9,8 @@ import UIKit
 
 class FriendsVC: UIViewController {
 
+    @IBOutlet weak var minYTopView: NSLayoutConstraint!
+    @IBOutlet weak var viewTop: UIStackView!
     @IBOutlet weak var btnName: UIButton!
     @IBOutlet weak var btnKokoId: UIButton!
     @IBOutlet weak var viewDot: UIView!
@@ -47,7 +49,7 @@ class FriendsVC: UIViewController {
 
 extension FriendsVC {
     
-    func initView() {
+    private func initView() {
         self.viewModel = FriendsVM()
         self.viewModel?.getUserData(completion: { [weak self] user in
             guard let user = user else { return }
@@ -57,19 +59,21 @@ extension FriendsVC {
         })
         
         self.viewModel?.getFriendList(completion: { [weak self] friendList in
-            guard let self = self else { return }
-            if friendList.isEmpty {
-                let view = NoneFriendView(frame: self.friendView.frame)
-                self.friendView.addSubview(view)
-            }else {
-                self.friendList = friendList.filter({$0.status != 2})
-                self.invitionList = friendList.filter({$0.status == 2})
-                self.friendView.configFriendsView(list: self.friendList)
-                self.invitionView.configData(list: self.invitionList, delegate: self)
-//                self.invitionView.backgroundColor = self.invitionList.isEmpty ? #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1) : .white
-                self.invitionView.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
-            }
+            self?.onGetFriendList(friendList)
         })
+    }
+    
+    private func onGetFriendList(_ friendList: [Friend]) {
+        if friendList.isEmpty {
+            let view = NoneFriendView(frame: self.friendView.frame)
+            self.friendView.addSubview(view)
+        }else {
+            self.friendList = friendList.filter({$0.status != 2})
+            self.invitionList = friendList.filter({$0.status == 2})
+            self.friendView.configFriendsView(list: self.friendList, delegate: self)
+            self.invitionView.configData(list: self.invitionList, delegate: self)
+            self.invitionView.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
+        }
     }
 }
 
@@ -83,4 +87,26 @@ extension FriendsVC: InvitionViewDelegate {
             self.view.layoutIfNeeded()
         }
     }
+}
+
+extension FriendsVC: FriendsViewDelegate {
+    func friendsViewShouldReload(in view: FriendsView) {
+        self.viewModel?.requestFriendList(completion: { [weak self] friendList in
+            self?.onGetFriendList(friendList)
+        })
+    }
+    
+    func shouldMove(Top moveTop: Bool, for view: FriendsView) {
+        if moveTop && self.minYTopView.constant == 0 {
+            self.minYTopView.constant = -self.viewTop.frame.height
+        }else if !moveTop && self.minYTopView.constant != 0 {
+            self.minYTopView.constant = 0
+        }else {
+            return
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
 }

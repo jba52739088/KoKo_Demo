@@ -7,7 +7,12 @@
 
 import UIKit
 import Alamofire
-//import SwiftyJSON
+
+enum DemoType: Int {
+    case EmptyFriend = 0
+    case OnlyFriend = 1
+    case FriendAndInvition = 2
+}
 
 enum APIInfo: String {
     /// 使用者資料
@@ -25,6 +30,7 @@ enum APIInfo: String {
 class APIManager {
     
     static let shared = APIManager()
+    private(set) var demoType: DemoType = .EmptyFriend
     private(set) var user: User?
     private(set) var friendList: [Friend] = []
     
@@ -34,6 +40,10 @@ class APIManager {
     
     func setFiendList(list: [Friend]) {
         self.friendList = list
+    }
+    
+    func setDemoType(_ type: DemoType) {
+        self.demoType = type
     }
     
     func getUserData(completion: (@escaping (User?) -> ())) {

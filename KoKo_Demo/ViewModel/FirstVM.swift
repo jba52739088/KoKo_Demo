@@ -7,13 +7,6 @@
 
 import Foundation
 
-
-enum DemoType: Int {
-    case EmptyFriend = 0
-    case OnlyFriend = 1
-    case FriendAndInvition = 2
-}
-
 protocol FirstVMInterface {
     func requestApi(for type: DemoType, completion: (@escaping (Bool) -> ()))
     
@@ -34,6 +27,7 @@ class FirstVM{
 
 extension FirstVM: FirstVMInterface{
     func requestApi(for type: DemoType, completion: @escaping ((Bool) -> ())) {
+        self.apiManager.setDemoType(type)
         switch type {
         case .EmptyFriend:
             self.requestEmptyFriend {
@@ -100,7 +94,7 @@ extension FirstVM: FirstVMInterface{
         }
         apiGroup.notify(queue: .main) {
             print("didFinish request")
-            _list = self.combineArray(list_1: _list_1, list_2: _list_2)
+            _list = Global.combineArray(list_1: _list_1, list_2: _list_2)
             self.apiManager.setUser(user: _user)
             self.apiManager.setFiendList(list: _list)
             completion()
@@ -134,29 +128,6 @@ extension FirstVM: FirstVMInterface{
 }
 
 extension FirstVM {
-    
-    private func combineArray(list_1: [Friend], list_2: [Friend]) -> [Friend] {
-        let newArray = list_1.reduce(into: list_2) { array, object in
-            if let index = array.firstIndex(where: { $0.name == object.name }) {
-                if let date1 = self.stringToDate(array[index].updateDate),
-                   let date2 = self.stringToDate(object.updateDate),
-                   date1 < date2 {
-                    array[index] = object
-                }
-            } else {
-                array.append(object)
-            }
-        }
-        return newArray
-    }
-    
-    private func stringToDate(_ String: String) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMdd"
-        let dateFormatter_2 = DateFormatter()
-        dateFormatter_2.dateFormat = "yyyy/MM/dd"
-        return dateFormatter.date(from: String) ?? dateFormatter_2.date(from: String)
-    }
     
     private func getUserData(completion: @escaping ((User?) -> ())) {
         APIManager.shared.getUserData { (data) in
