@@ -14,14 +14,11 @@
                 <outlet property="btnKokoId" destination="pCj-OS-MQ4" id="jao-xo-CQn"/>
                 <outlet property="btnName" destination="Kyg-y1-M4i" id="nTz-vC-tt2"/>
                 <outlet property="categoryView" destination="1xw-CS-CLl" id="KEp-Hc-hJ9"/>
-                <outlet property="chatView" destination="N3U-sX-NjL" id="REh-3e-z7F"/>
                 <outlet property="contentView" destination="7Rm-os-dmH" id="DRe-Z4-B3w"/>
                 <outlet property="friendView" destination="6Gp-NR-cwt" id="IwD-if-K18"/>
                 <outlet property="heightInvitionView" destination="qHN-kN-daH" id="fHD-uk-ALL"/>
                 <outlet property="invitionView" destination="QcM-MJ-kBo" id="iOB-Ci-Td1"/>
                 <outlet property="minYTopView" destination="IHO-LW-YdB" id="evD-8z-6aU"/>
-                <outlet property="scrollView" destination="1gW-QF-Nvi" id="hHH-eA-7vG"/>
-                <outlet property="stackView" destination="wuv-1c-Ecq" id="E8Z-K2-q75"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewDot" destination="6pB-OJ-8t2" id="ADW-ap-POG"/>
                 <outlet property="viewTop" destination="cC2-26-4Dw" id="s4C-PO-ZSI"/>
@@ -115,7 +112,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g37-L7-8Qz">
                                                             <rect key="frame" x="0.0" y="0.0" width="26" height="34"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-jt-iiQ">
+                                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-jt-iiQ">
                                                                     <rect key="frame" x="0.0" y="6" width="26" height="18"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="18" id="cvC-7R-Lv2"/>
@@ -248,43 +245,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Rm-os-dmH" userLabel="contentView">
                     <rect key="frame" x="0.0" y="128" width="414" height="768"/>
                     <subviews>
-                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gW-QF-Nvi">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gp-NR-cwt" userLabel="friendView" customClass="FriendsView" customModule="KoKo_Demo" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuv-1c-Ecq">
-                                    <rect key="frame" x="0.0" y="0.0" width="828" height="768"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gp-NR-cwt" userLabel="friendView" customClass="FriendsView" customModule="KoKo_Demo" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3U-sX-NjL" userLabel="chatView">
-                                            <rect key="frame" x="414" y="0.0" width="414" height="768"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="wuv-1c-Ecq" firstAttribute="top" secondItem="RN6-Hf-hOQ" secondAttribute="top" id="BLc-Uq-LeO"/>
-                                <constraint firstItem="wuv-1c-Ecq" firstAttribute="bottom" secondItem="RN6-Hf-hOQ" secondAttribute="bottom" id="YdY-lR-sgB"/>
-                                <constraint firstItem="wuv-1c-Ecq" firstAttribute="leading" secondItem="RN6-Hf-hOQ" secondAttribute="leading" id="cT0-T2-bmy"/>
-                                <constraint firstItem="wuv-1c-Ecq" firstAttribute="trailing" secondItem="RN6-Hf-hOQ" secondAttribute="trailing" id="z4I-DP-6EF"/>
-                            </constraints>
-                            <viewLayoutGuide key="contentLayoutGuide" id="RN6-Hf-hOQ"/>
-                            <viewLayoutGuide key="frameLayoutGuide" id="z57-ax-psd"/>
-                        </scrollView>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="6Gp-NR-cwt" firstAttribute="height" secondItem="7Rm-os-dmH" secondAttribute="height" id="FIZ-CR-NGR"/>
-                        <constraint firstItem="N3U-sX-NjL" firstAttribute="width" secondItem="7Rm-os-dmH" secondAttribute="width" id="gD4-LN-WMO"/>
-                        <constraint firstItem="N3U-sX-NjL" firstAttribute="height" secondItem="7Rm-os-dmH" secondAttribute="height" id="l2U-6x-qP4"/>
-                        <constraint firstItem="1gW-QF-Nvi" firstAttribute="leading" secondItem="7Rm-os-dmH" secondAttribute="leading" id="rLC-hD-3C7"/>
-                        <constraint firstItem="6Gp-NR-cwt" firstAttribute="width" secondItem="7Rm-os-dmH" secondAttribute="width" id="tii-9a-NDj"/>
-                        <constraint firstAttribute="trailing" secondItem="1gW-QF-Nvi" secondAttribute="trailing" id="uBI-Ey-EAN"/>
-                        <constraint firstItem="1gW-QF-Nvi" firstAttribute="top" secondItem="7Rm-os-dmH" secondAttribute="top" id="v2u-mw-mX1"/>
-                        <constraint firstAttribute="bottom" secondItem="1gW-QF-Nvi" secondAttribute="bottom" id="yfU-qL-qdM"/>
+                        <constraint firstItem="6Gp-NR-cwt" firstAttribute="leading" secondItem="7Rm-os-dmH" secondAttribute="leading" id="IEX-Ls-nHE"/>
+                        <constraint firstAttribute="bottom" secondItem="6Gp-NR-cwt" secondAttribute="bottom" id="MZw-sD-UiH"/>
+                        <constraint firstAttribute="trailing" secondItem="6Gp-NR-cwt" secondAttribute="trailing" id="sem-7r-Ssa"/>
+                        <constraint firstItem="6Gp-NR-cwt" firstAttribute="top" secondItem="7Rm-os-dmH" secondAttribute="top" id="wGz-wn-f0E"/>
                     </constraints>
                 </view>
             </subviews>

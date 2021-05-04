@@ -13,16 +13,8 @@
 		F95F821B2639CC880025E68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95F821A2639CC880025E68B /* Assets.xcassets */; };
 		F95F821E2639CC880025E68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95F821C2639CC880025E68B /* LaunchScreen.storyboard */; };
 		F95F82372639D5930025E68B /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F82362639D5930025E68B /* MainTabVC.swift */; };
-		F95F8240263BECD20025E68B /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F823E263BECD20025E68B /* ProductsVC.swift */; };
-		F95F8241263BECD20025E68B /* ProductsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F823F263BECD20025E68B /* ProductsVC.xib */; };
 		F95F8245263BECE30025E68B /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F8243263BECE30025E68B /* FriendsVC.swift */; };
 		F95F8246263BECE30025E68B /* FriendsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F8244263BECE30025E68B /* FriendsVC.xib */; };
-		F95F824A263BED360025E68B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F8248263BED360025E68B /* HomeVC.swift */; };
-		F95F824B263BED360025E68B /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F8249263BED360025E68B /* HomeVC.xib */; };
-		F95F824F263BED910025E68B /* ManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F824D263BED910025E68B /* ManageVC.swift */; };
-		F95F8250263BED910025E68B /* ManageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F824E263BED910025E68B /* ManageVC.xib */; };
-		F95F8254263BED9E0025E68B /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F8252263BED9E0025E68B /* SettingVC.swift */; };
-		F95F8255263BED9E0025E68B /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F8253263BED9E0025E68B /* SettingVC.xib */; };
 		F95F825C263C0F2C0025E68B /* KokoTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F825B263C0F2C0025E68B /* KokoTabBar.swift */; };
 		F95F825F263EA6390025E68B /* Extension_UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F825E263EA6390025E68B /* Extension_UIView.swift */; };
 		F95F8277263EBA050025E68B /* NoneFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95F8276263EBA050025E68B /* NoneFriendView.swift */; };
@@ -58,16 +50,8 @@
 		F95F821D2639CC880025E68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F95F821F2639CC880025E68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F95F82362639D5930025E68B /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
-		F95F823E263BECD20025E68B /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
-		F95F823F263BECD20025E68B /* ProductsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsVC.xib; sourceTree = "<group>"; };
 		F95F8243263BECE30025E68B /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
 		F95F8244263BECE30025E68B /* FriendsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsVC.xib; sourceTree = "<group>"; };
-		F95F8248263BED360025E68B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		F95F8249263BED360025E68B /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
-		F95F824D263BED910025E68B /* ManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageVC.swift; sourceTree = "<group>"; };
-		F95F824E263BED910025E68B /* ManageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageVC.xib; sourceTree = "<group>"; };
-		F95F8252263BED9E0025E68B /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
-		F95F8253263BED9E0025E68B /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		F95F825B263C0F2C0025E68B /* KokoTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoTabBar.swift; sourceTree = "<group>"; };
 		F95F825E263EA6390025E68B /* Extension_UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_UIView.swift; sourceTree = "<group>"; };
 		F95F8276263EBA050025E68B /* NoneFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneFriendView.swift; sourceTree = "<group>"; };
@@ -165,15 +149,6 @@
 			path = MainTab;
 			sourceTree = "<group>";
 		};
-		F95F8267263EB6E50025E68B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F95F823E263BECD20025E68B /* ProductsVC.swift */,
-				F95F823F263BECD20025E68B /* ProductsVC.xib */,
-			);
-			path = Products;
-			sourceTree = "<group>";
-		};
 		F95F8269263EB6F10025E68B /* Friends */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,33 +157,6 @@
 				F95F82B2263FA6720025E68B /* Views */,
 			);
 			path = Friends;
-			sourceTree = "<group>";
-		};
-		F95F826B263EB6FA0025E68B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				F95F8248263BED360025E68B /* HomeVC.swift */,
-				F95F8249263BED360025E68B /* HomeVC.xib */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		F95F826D263EB7050025E68B /* Manage */ = {
-			isa = PBXGroup;
-			children = (
-				F95F824D263BED910025E68B /* ManageVC.swift */,
-				F95F824E263BED910025E68B /* ManageVC.xib */,
-			);
-			path = Manage;
-			sourceTree = "<group>";
-		};
-		F95F826F263EB7190025E68B /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				F95F8252263BED9E0025E68B /* SettingVC.swift */,
-				F95F8253263BED9E0025E68B /* SettingVC.xib */,
-			);
-			path = Setting;
 			sourceTree = "<group>";
 		};
 		F95F8270263EB7430025E68B /* ViewModel */ = {
@@ -287,11 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				F95F8265263EB6CD0025E68B /* MainTab */,
-				F95F8267263EB6E50025E68B /* Products */,
 				F95F8269263EB6F10025E68B /* Friends */,
-				F95F826B263EB6FA0025E68B /* Home */,
-				F95F826D263EB7050025E68B /* Manage */,
-				F95F826F263EB7190025E68B /* Setting */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -360,13 +304,9 @@
 				F9FB6793263FC79F000EAB4A /* FriendInvitionView.xib in Resources */,
 				F95F821B2639CC880025E68B /* Assets.xcassets in Resources */,
 				F95F8281263EBD090025E68B /* ChatView.xib in Resources */,
-				F95F8255263BED9E0025E68B /* SettingVC.xib in Resources */,
-				F95F8250263BED910025E68B /* ManageVC.xib in Resources */,
 				F95F82B7263FA6AF0025E68B /* FriendCell.xib in Resources */,
 				F95F82192639CC870025E68B /* Main.storyboard in Resources */,
 				F95F8246263BECE30025E68B /* FriendsVC.xib in Resources */,
-				F95F8241263BECD20025E68B /* ProductsVC.xib in Resources */,
-				F95F824B263BED360025E68B /* HomeVC.xib in Resources */,
 				F95F82BA263FAC180025E68B /* FriendsView.xib in Resources */,
 				F95F827B263EBA100025E68B /* NoneFriendView.xib in Resources */,
 			);
@@ -425,9 +365,7 @@
 				F9FB67C0263FD7C4000EAB4A /* APIManager.swift in Sources */,
 				F95F8277263EBA050025E68B /* NoneFriendView.swift in Sources */,
 				F9FB678A263FB26D000EAB4A /* FriendInvitionCard.swift in Sources */,
-				F95F8254263BED9E0025E68B /* SettingVC.swift in Sources */,
 				F9FB67D3263FE8DD000EAB4A /* FriendsVM.swift in Sources */,
-				F95F824A263BED360025E68B /* HomeVC.swift in Sources */,
 				F95F825C263C0F2C0025E68B /* KokoTabBar.swift in Sources */,
 				F95F827E263EBC270025E68B /* ChatView.swift in Sources */,
 				F95F825F263EA6390025E68B /* Extension_UIView.swift in Sources */,
@@ -436,14 +374,12 @@
 				F95F82372639D5930025E68B /* MainTabVC.swift in Sources */,
 				F9FB67C4263FDA3E000EAB4A /* Result.swift in Sources */,
 				F95F8245263BECE30025E68B /* FriendsVC.swift in Sources */,
-				F95F8240263BECD20025E68B /* ProductsVC.swift in Sources */,
 				F9FB67CE263FE7D0000EAB4A /* Friend.swift in Sources */,
 				F95F82122639CC870025E68B /* AppDelegate.swift in Sources */,
 				F9FB67D9263FEF6B000EAB4A /* FirstVM.swift in Sources */,
 				F9FB67CA263FDA8D000EAB4A /* User.swift in Sources */,
 				F9FB6790263FC797000EAB4A /* FriendInvitionView.swift in Sources */,
 				F95F82B6263FA6AF0025E68B /* FriendCell.swift in Sources */,
-				F95F824F263BED910025E68B /* ManageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

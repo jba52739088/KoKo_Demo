@@ -19,10 +19,10 @@ class FriendsVC: UIViewController {
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var friendView: FriendsView!
-    @IBOutlet weak var chatView: UIView!
-    @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var scrollView: UIScrollView!
-    
+//    @IBOutlet weak var chatView: UIView!
+//    @IBOutlet weak var stackView: UIStackView!
+//    @IBOutlet weak var scrollView: UIScrollView!
+    private var emptyFriendView: NoneFriendView?
     private var viewModel: FriendsVMInterface?
     private var friendList: [Friend] = []
     private var invitionList: [Friend] = []
@@ -31,19 +31,6 @@ class FriendsVC: UIViewController {
         super.viewDidLoad()
 
         self.initView()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        let noneFriendView = NoneFriendView.shared!
-//        let friendView = FriendsView.shared!
-        let msgView = ChatView.shared!
-//        noneFriendView.frame = friendView.frame
-        msgView.frame = chatView.frame
-//        self.friendView.addSubview(noneFriendView)
-//        self.friendView.addSubview(friendView)
-        self.chatView.addSubview(msgView)
-        self.view.layoutIfNeeded()
     }
 }
 
@@ -64,15 +51,20 @@ extension FriendsVC {
     }
     
     private func onGetFriendList(_ friendList: [Friend]) {
+        self.invitionView.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
         if friendList.isEmpty {
-            let view = NoneFriendView(frame: self.friendView.frame)
-            self.friendView.addSubview(view)
+            self.emptyFriendView?.removeFromSuperview()
+            if let subView = self.emptyFriendView {
+                self.friendView.addFixView(view: subView)
+            }else {
+                self.emptyFriendView = NoneFriendView()
+                self.friendView.addFixView(view: self.emptyFriendView!)
+            }
         }else {
             self.friendList = friendList.filter({$0.status != 2})
             self.invitionList = friendList.filter({$0.status == 2})
             self.friendView.configFriendsView(list: self.friendList, delegate: self)
             self.invitionView.configData(list: self.invitionList, delegate: self)
-            self.invitionView.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
         }
     }
 }

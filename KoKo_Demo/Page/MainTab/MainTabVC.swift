@@ -16,16 +16,25 @@ enum TabBarItems: String, CaseIterable {
     
     var controller: UIViewController {
         switch self {
-        case .Products:
-            return ProductsVC()
         case .Friends:
             return FriendsVC()
+        default:
+            return UIViewController()
+        }
+    }
+    
+    var itemImage: UIImage {
+        switch self {
+        case .Products:
+            return #imageLiteral(resourceName: "icTabbarProductsOff")
+        case .Friends:
+            return #imageLiteral(resourceName: "icTabbarFriendsOn")
         case .Home:
-            return HomeVC()
+            return #imageLiteral(resourceName: "icTabbarHomeOff")
         case .Manage:
-            return ManageVC()
+            return #imageLiteral(resourceName: "icTabbarManageOff")
         case .Setting:
-            return SettingVC()
+            return #imageLiteral(resourceName: "icTabbarSettingOff")
         }
     }
 }
@@ -69,10 +78,10 @@ extension MainTabVC {
             self.tabBar.backgroundImage = UIImage()
             self.tabBar.shadowImage = UIImage()
             let tabBarImageView = UIImageView(image: image)
-            tabBarImageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: image.size.height)
+            tabBarImageView.backgroundColor = .clear
+            tabBarImageView.frame = CGRect(x: 0, y: -14, width: UIScreen.main.bounds.size.width, height: image.size.height)
             self.tabBar.addSubview(tabBarImageView)
             self.tabBar.sendSubviewToBack(tabBarImageView)
-            
         }
         
         self.tabBar.layoutIfNeeded()
@@ -83,23 +92,22 @@ extension MainTabVC {
         var controllers: [UIViewController] = []
         for selection in TabBarItems.allCases {
             let vc = selection.controller
-            let image = UIImage(named: "icTabbar\(selection.rawValue)Off")?.withRenderingMode(.alwaysOriginal)
-            let selectedImage = UIImage(named: "icTabbar\(selection.rawValue)On")?.withRenderingMode(.alwaysOriginal)
-            let tabItem = UITabBarItem(title: nil,
-                                       image: image,
-                                       selectedImage: selectedImage)
-            
+            let tabItem = UITabBarItem(title: nil, image: selection.itemImage.withRenderingMode(.alwaysOriginal), tag: selection.hashValue)
             if selection == .Home {
-                tabItem.imageInsets.top = 14
-                tabItem.imageInsets.bottom = -14
+                tabItem.imageInsets.top = -3
+                tabItem.imageInsets.bottom = 0
             }else {
-                tabItem.imageInsets.top = 19
-                tabItem.imageInsets.bottom = -19
+                tabItem.imageInsets.top = 5
+                tabItem.imageInsets.bottom = 0
+            }
+            vc.title = selection.rawValue
+            if selection != .Friends {
+                vc.view.backgroundColor = .gray
             }
             vc.tabBarItem = tabItem
+            vc.view.frame = CGRect(origin: vc.view.frame.origin, size: CGSize(width: vc.view.frame.width, height: vc.view.frame.height + 14))
             controllers.append(vc)
         }
-        
         self.setViewControllers(controllers, animated: false)
         self.selectedIndex = 1
         
@@ -119,8 +127,9 @@ extension MainTabVC {
 }
 
 extension MainTabVC: UITabBarControllerDelegate {
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        if let _ = viewController as? HomeVC {
+        if viewController.title == TabBarItems.Home.rawValue {
             self.navigationController?.dismiss(animated: true, completion: nil)
         }
     }

@@ -10,15 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="u8N-6c-Par" customClass="FriendInvitionCard" customModule="KoKo_Demo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="u8N-6c-Par" customClass="FriendInvitionCard" customModule="KoKo_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u8N-6c-Par" id="cm2-WH-5kJ">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3o-gX-qd8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                        <rect key="frame" x="30" y="5" width="354" height="70"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFriendsFemaleDefault" translatesAutoresizingMaskIntoConstraints="NO" id="lWF-ah-Hty">
                                 <rect key="frame" x="15" y="15" width="40" height="40"/>
@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCN-A3-mCW">
-                                <rect key="frame" x="369" y="20" width="30" height="30"/>
+                                <rect key="frame" x="309" y="20" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NCC-Uc-Vua"/>
                                     <constraint firstAttribute="width" constant="30" id="q7M-3a-0Is"/>
@@ -36,7 +36,7 @@
                                 <state key="normal" image="btn-friends-delet"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkF-pO-hJm">
-                                <rect key="frame" x="324" y="20" width="30" height="30"/>
+                                <rect key="frame" x="264" y="20" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="bQb-qY-DAx"/>
                                     <constraint firstAttribute="height" constant="30" id="omg-f9-3Gb"/>
@@ -87,9 +87,9 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Z3o-gX-qd8" secondAttribute="bottom" id="Bgq-sk-Rz8"/>
-                    <constraint firstAttribute="trailing" secondItem="Z3o-gX-qd8" secondAttribute="trailing" id="Xgc-RV-IdP"/>
-                    <constraint firstItem="Z3o-gX-qd8" firstAttribute="leading" secondItem="cm2-WH-5kJ" secondAttribute="leading" id="jTi-6z-WKW"/>
+                    <constraint firstAttribute="bottom" secondItem="Z3o-gX-qd8" secondAttribute="bottom" constant="5" id="Bgq-sk-Rz8"/>
+                    <constraint firstAttribute="trailing" secondItem="Z3o-gX-qd8" secondAttribute="trailing" constant="30" id="Xgc-RV-IdP"/>
+                    <constraint firstItem="Z3o-gX-qd8" firstAttribute="leading" secondItem="cm2-WH-5kJ" secondAttribute="leading" constant="30" id="jTi-6z-WKW"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

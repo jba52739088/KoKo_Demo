@@ -78,29 +78,26 @@ extension FriendInvitionView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? FriendInvitionCard
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? FriendInvitionCard
             else { return UITableViewCell() }
         let scaling = !self.isExpanded && indexPath.section != 0
         cell.configInvitionCard(data: self.invitionList[indexPath.section], scaling: scaling)
         cell.content.layer.zPosition = -CGFloat( self.invitionList.count - indexPath.section)
         cell.selectionStyle = .none
+        cell.superview?.clipsToBounds = false
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 70
+            return 80
         }else {
             if !self.isExpanded {
                 return indexPath.section == 1 ? 10 : 0
             }else {
-                return 70
+                return 80
             }
         }
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -108,7 +105,7 @@ extension FriendInvitionView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return !self.isExpanded ? 0 : 10
+        return !self.isExpanded ? 0 : 5
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

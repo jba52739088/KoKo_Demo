@@ -30,14 +30,14 @@ class FriendInvitionCard: UITableViewCell {
     func configInvitionCard(data: Friend, scaling: Bool) {
         
         self.lbName.text = data.name
-        self.traillingCard.constant = !scaling ? 0 : 10
-        self.leadingCard.constant = !scaling ? 0 : 10
+        self.traillingCard.constant = !scaling ? 30 : 40
+        self.leadingCard.constant = !scaling ? 30 : 40
     }
     
     func configCardSize(scaling: Bool) {
         
-        self.traillingCard.constant = !scaling ? 0 : 10
-        self.leadingCard.constant = !scaling ? 0 : 10
+        self.traillingCard.constant = !scaling ? 30 : 40
+        self.leadingCard.constant = !scaling ? 30 : 40
         UIView.animate(withDuration: 0.3) {
             self.layoutIfNeeded()
         }
@@ -49,10 +49,10 @@ extension FriendInvitionCard {
     private func setShadow() {
         self.viewCard.layer.shadowOpacity = 0.1
         self.viewCard.layer.shadowOffset = CGSize(width: 2.5, height: 2.5)
-        self.viewCard.layer.shadowRadius = 6
+        self.viewCard.layer.shadowRadius = 3
         self.viewCard.layer.shadowColor = UIColor.black.cgColor
         self.viewCard.layer.masksToBounds = false
-        self.content.layer.masksToBounds = false
+        self.viewCard.clipsToBounds = false
     }
     
 }
